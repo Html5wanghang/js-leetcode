@@ -11,9 +11,9 @@ var numJewelsInStones = function(J, S) {
   var removeStr = function(str, target) {
     var targetNoStr = false;
     var temp = target;
-    while (targetNoStr == false) {
+    while (targetNoStr === false) {
       var index = temp.indexOf(str);
-      if (index == -1) {
+      if (index === -1) {
         targetNoStr = true
       } else {
         var arr = temp.split("");
