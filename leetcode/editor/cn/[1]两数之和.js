@@ -32,3 +32,4 @@ var twoSum = function(nums, target) {
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
+//结题思路，把差值作为hash属性存储起来，依次遍历，有则取

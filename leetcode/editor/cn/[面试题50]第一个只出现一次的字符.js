@@ -39,3 +39,5 @@ var firstUniqChar = function(s) {
   return " ";
 };
 //leetcode submit region end(Prohibit modification and deletion)
+// 结题思路：
+// 将值依次存储在哈希里，如果已存在，则为false，不存在，则为true，遍历哈希，寻找第一个为true的值

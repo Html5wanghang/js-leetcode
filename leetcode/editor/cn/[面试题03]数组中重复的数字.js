@@ -35,3 +35,5 @@ var findRepeatNumber = function(nums) {
   }
 };
 //leetcode submit region end(Prohibit modification and deletion)
+
+//把值作为哈希属性存储，依次遍历，如在哈希上，则返回
