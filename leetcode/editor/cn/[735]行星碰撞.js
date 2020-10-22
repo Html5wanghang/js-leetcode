@@ -55,7 +55,7 @@
 // Related Topics 栈
 // 👍 111 👎 0
 
-å
+
 //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * @param {number[]} asteroids
@@ -74,7 +74,7 @@ var asteroidCollision = function(asteroids) {
           stack.push(asteroids[i])
         } else {
           if (stack[stack.length - 1] + asteroids[i] === 0) {
-            stack.pop();å
+            stack.pop();
           } else if (stack[stack.length - 1] + asteroids[i] < 0) {
             stack.pop();
             i--;
