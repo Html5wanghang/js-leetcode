@@ -27,17 +27,28 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-  let res = new ListNode(0);
-  let b = res;
-  let val;
-  while (head) {
-    if (val !== head.val) {
-      val = head.val;
-      b.next = new ListNode(head.val);
-      b = b.next;
+  let res = head;
+  while (res && res.next) {
+    if (res.val === res.next.val) {
+      res.next = res.next.next;
+    } else {
+      res = res.next;
     }
-    head = head.next;
   }
-  return res.next;
+  return head;
 };
+// var deleteDuplicates = function(head) {
+//   let res = new ListNode(0);
+//   let b = res;
+//   let val;
+//   while (head) {
+//     if (val !== head.val) {
+//       val = head.val;
+//       b.next = new ListNode(head.val);
+//       b = b.next;
+//     }
+//     head = head.next;
+//   }
+//   return res.next;
+// };
 //leetcode submit region end(Prohibit modification and deletion)
