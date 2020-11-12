@@ -35,19 +35,21 @@
 var isIsomorphic = function(s, t) {
     let obj1 = {};
     let obj2 = {};
-    let result = true
+    let result = true;
     for (let i = 0; i < s.length; i ++) {
-      if (s[i] in obj1) {
-        if (obj1[s[i]] !== t[i]) {
+      const boolean0 = s[i] in obj1;
+      const boolean1 = t[i] in obj2;
+      if (boolean0 && boolean1) {
+        if (obj1[s[i]] !== obj2[t[i]]) {
           result = false;
           break
         }
-      } else if (t[i] in obj2) {
+      } else if ((boolean0 || boolean1) === false) {
+        obj1[s[i]] = i;
+        obj2[t[i]] = i;
+      } else {
         result = false;
         break
-      } else {
-        obj1[s[i]] = t[i];
-        obj2[t[i]] = null;
       }
     }
     return result;
