@@ -35,6 +35,9 @@
 var search = function(nums, target) {
   let start = 0;
   let num = 0;
+  if (nums.length > 0 && (nums[0] > target || nums[nums.length - 1] < target)) {
+    return 0;
+  }
   while (start < nums.length) {
     if (nums[start] > target) {
       return num;
