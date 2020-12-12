@@ -4,4 +4,5 @@
 
 ####基本数据结构
 
-##### [树](./tree/Readme.md)
+##### [树](./markdown/tree.md)
+##### [哈希表](./markdown/hash.md)
