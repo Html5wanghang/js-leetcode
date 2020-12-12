@@ -6,3 +6,4 @@
 
 ##### [树](./markdown/tree.md)
 ##### [哈希表](./markdown/hash.md)
+##### [栈](./markdown/stack.md)
