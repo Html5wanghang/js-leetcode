@@ -4,6 +4,6 @@
 
 #### 基本数据结构
 
-##### [树](./markdown/tree.md)
-##### [哈希表](./markdown/hash.md)
-##### [栈](./markdown/stack.md)
+##### [树](./markdown/leetcode/tree.md)
+##### [哈希表](./markdown/leetcode/hash.md)
+##### [栈](./markdown/leetcode/stack.md)
