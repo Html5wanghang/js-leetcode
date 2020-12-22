@@ -68,35 +68,22 @@ var checkValidString = function(s) {
         } else {
             anyStack.push(i);
         }
-    };
-    let str = arr.join('');
-    let stack = [];
-    if (str.includes('(')) {
-        for (let i = str.length - 1; i >= 0; i --) {
-            if (str[i] === '*') {
-                stack.push('*')
+    }
+    if (leftStack.length > anyStack.length) {
+        return false
+    } else {
+        let result = true;
+        while (leftStack.length > 0) {
+            if (leftStack[leftStack.length - 1] > anyStack[anyStack.length - 1]) {
+                result =false;
+                break
             } else {
-                if (stack.length > 0 && stack[stack.length - 1] === '*') {
-                    stack.pop();
-                } else {
-                    return false
-                }
+                leftStack.pop();
+                anyStack.pop();
             }
         };
-    } else if (str.includes(')')){
-        for (let i = 0; i < str.length; i ++) {
-            if (str[i] === '*') {
-                stack.push('*')
-            } else {
-                if (stack.length > 0 && stack[stack.length - 1] === '*') {
-                    stack.pop();
-                } else {
-                    return false;
-                }
-            }
-        }
+        return result
     }
-    return true;
 
 };
 //leetcode submit region end(Prohibit modification and deletion)
