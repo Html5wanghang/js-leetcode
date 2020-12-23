@@ -60,14 +60,10 @@ var minAddToMakeValid = function(S) {
     if (S[i] === '(') {
       stack.push(S[i])
     } else {
-      if (stack.length === 0) {
-        stack.push(S[i])
+      if (stack[stack.length - 1] === '(') {
+        stack.pop();
       } else {
-        if (stack[stack.length - 1] === '(') {
-          stack.pop();
-        } else {
-          stack.push(S[i]);
-        }
+        stack.push(S[i]);
       }
     }
   }
