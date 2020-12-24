@@ -6,8 +6,8 @@
 #### UDP, TCP传输区别，TCP为什么可靠
 #### 5层模型 7层模型
 #### 队头阻塞
-#### http 和https
-#### 浏览器中输入一个URL的过程
+#### http 和 https
+#### [浏览器中输入一个URL的过程](openUrl.md)
 #### http缓存
 #### cookie的安全性
 
