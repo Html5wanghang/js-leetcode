@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box, #box1 {
+            width: 80px;
+            height: 80px;
+            margin: 100px auto;
+            background-color: #131313;
+            color: #ffffff;
+            text-align: center;
+            line-height: 80px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">防抖</div>
+<div id="box1">节流</div>
+<script>
+    let test = function () {
+        console.log(1234);
+    }
+    // 防抖
+    const debounce = function (fun, delay) {
+        let timer = null;
+        return function () {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                fun()
+            }, delay)
+        }
+    }
+    // 节流
+    const throttle = (fn, delay) => {
+        let timer = null;
+        let startTime = Date.now();
+        return function () {
+            //如果空闲时间 > delay，立即执行
+            if (Date.now() - startTime > delay) {
+                startTime = Date.now();
+                fn();
+            } else {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    fn();
+                }, delay);
+            }
+        }
+    }
+    document.getElementById('box').addEventListener("click",
+        debounce(throttle, 1000)
+    )
+    document.getElementById('box1').addEventListener("click",
+        throttle(throttle, 1000)
+    )
+</script>
+</body>
+</html>
