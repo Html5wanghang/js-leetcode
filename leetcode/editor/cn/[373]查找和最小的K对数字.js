@@ -40,19 +40,39 @@
 var kSmallestPairs = function(nums1, nums2, k) {
     let map = new Map();
     let arr = [];
+    let swap = (arr,index) => {
+        let temp = index;
+        let left = 2 * index + 1;
+        let right = 2 * index + 2;
+        if (arr[left] && arr[index][0] + arr[index][1] < arr[left][0] + arr[left][1] ) {
+            index = left
+        }
+        if (arr[right] && arr[index][0] + arr[index][1] < arr[right][0] + arr[right][1]) {
+            index = right
+        }
+
+        if (index !== temp) {
+            [arr[index], arr[temp]] = [arr[temp], arr[index]];
+            swap(arr, index);
+        }
+    }
     for (let i = 0; i < nums1.length; i ++) {
         for (let j = 0; j < nums2.length; j ++) {
-            let key = [nums1[i],nums2[j]]; let val = nums1[i] + nums2[j];
-            map.set(key, val);
+            if (arr.length < k) {
+                arr.push( [nums1[i], nums2[j]])
+                 let len = arr.length - 1;
+                while (len !== 0 && arr[len] && arr[len][0] + arr[len][1] > arr[(len - 1) >> 1][0] + arr[(len - 1) >> 1][1]) {
+                    [arr[len], arr[(len - 1) >> 1]] = [arr[(len - 1) >> 1], arr[len]];
+                    len = (len - 1) >> 1;
+                }
+            } else {
+                if ( nums1[i] + nums2[j] < arr[0][0] + arr[0][1]) {
+                    arr[0] = [nums1[i], nums2[j]];
+                    swap(arr, 0)
+                }
+            }
         }
     };
-    let newArr = [...map].sort((a,b) => {
-        return a[1] - b[1]
-    });
-    let min = Math.min(newArr.length, k)
-    for (let i = 0; i < min; i ++ ) {
-        arr.push(newArr[i][0]);
-    }
     return arr
 };
 //leetcode submit region end(Prohibit modification and deletion)
