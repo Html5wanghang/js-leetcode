@@ -4,6 +4,7 @@
 ## 手写堆实践(该实践是对值来讲的，堆里存的是值，比较的是值)
 
 ##### [最大堆](./heap/maxHeap.js)
+##### [带size的最大堆](./heap/maxHeap.js)
 ##### [最小堆](./heap/minHeap.js)
 ##### [传参数区分最大最小堆](./heap/heap.js)
 
