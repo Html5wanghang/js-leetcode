@@ -27,28 +27,21 @@
  * @return {string[]}
  */
 var generateParenthesis = function(n) {
-  let arr = ['()'];
-  let set = new Set(arr);
-  let map = new Map();
-  let j = 1;
-  while (j < n) {
-    const tempArr = Array.from(set);
-    map.set(j, new Set(tempArr));
-    set.clear();
-    tempArr.forEach((cat) => {
-      set.add('()'.concat(cat));
-      set.add(cat.concat('()'));
-      set.add('('.concat(cat).concat(')'));
-      for (let i = 1; i <= cat.length / 2; i++) {
-        let str = cat.slice(0, i * 2);
-        if (map.get(i).has(str)) {
-          set.add('('.concat(cat.slice(0, 2 * i)).concat(')').concat(cat.slice(2 * i)))
-        }
-      }
-    })
-    j++;
+  let arr = [];
+  let dfs = (left, right, str) => {
+    if (left === 0 && right === 0) {
+      arr.push(str);
+      return
+    }
+    if (left > 0) {
+      dfs(left - 1, right, str + '(')
+    }
+    if (right > left) {
+      dfs(left, right - 1, str + ')')
+    }
   };
-  return Array.from(set);
+  dfs(n,n,'');
+  return arr;
 };
 //leetcode submit region end(Prohibit modification and deletion)
 // (())(())这种在为

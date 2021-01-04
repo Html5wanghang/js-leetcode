@@ -17,6 +17,7 @@
 #### 常见算法
 ##### [动态规划](./markdown/leetcode/dp.md)
 ##### [贪心算法](./markdown/leetcode/greedy.md)
+##### [回溯算法](./markdown/leetcode/back.md)
 #### 其他
 ##### [最近的前端学习总结](./markdown/study/index.md)
 ##### [工作中遇到的问题总结](./markdown/problem/index.md)
