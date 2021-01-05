@@ -7,4 +7,6 @@
 ##### [电话号码的字母组合](../../leetcode/editor/cn/[17]电话号码的字母组合.js)
 ##### [括号生成](../../leetcode/editor/cn/[22]括号生成.js)
 ##### [字符串的排列](../../leetcode/editor/cn/[剑指Offer38]字符串的排列.js)
+##### [全排列](../../leetcode/editor/cn/[46]全排列.js)
+
 #### 困难
