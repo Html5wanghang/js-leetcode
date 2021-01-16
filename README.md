@@ -14,7 +14,8 @@
 ##### [栈](./markdown/leetcode/stack.md)
 ##### [堆](./markdown/leetcode/heap.md)
 
-#### 常见算法
+#### 常见算法思路
+##### [位运算](./markdown/leetcode/bit.md)
 ##### [动态规划](./markdown/leetcode/dp.md)
 ##### [贪心算法](./markdown/leetcode/greedy.md)
 ##### [回溯算法](./markdown/leetcode/back.md)
