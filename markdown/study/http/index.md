@@ -2,7 +2,7 @@
 
 #### [不同版本的http协议差别](httpVersion.md)
 #### [三次握手四次挥手](tcpConnection.md)
-#### 常见状态码
+#### [常见状态码](code.md)
 #### UDP, TCP传输区别，TCP为什么可靠
 #### 5层模型 7层模型
 #### 队头阻塞
