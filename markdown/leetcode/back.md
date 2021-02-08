@@ -10,4 +10,7 @@
 ##### [字符串的排列](../../leetcode/editor/cn/[剑指Offer38]字符串的排列.js)
 ##### [全排列](../../leetcode/editor/cn/[46]全排列.js)
 ##### [子集](../../leetcode/editor/cn/[78]子集.js)
+##### [复原IP地址](../../leetcode/editor/cn/[93]复原IP地址.js)
+有点意思的回溯题，注意剪枝和大于12的情况
+
 #### 困难
