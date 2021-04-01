@@ -41,6 +41,10 @@
  * @return {number}
  */
 var titleToNumber = function(columnTitle) {
-
+    let num = 0;
+    for (let i = 0; i < columnTitle.length; i ++) {
+        num += Math.pow(26, columnTitle.length - i - 1) * (columnTitle[i].charCodeAt(0) - 64);
+    }
+    return num
 };
 //leetcode submit region end(Prohibit modification and deletion)
