@@ -8,7 +8,7 @@
 #### 怎么样理解原型链
 #### 宏任务和微任务
 #### 实现new函数
-#### bind call,apply 实现
+#### [bind call,apply 实现](bindcallapply.js)
 #### 闭包及其作用
 
 
